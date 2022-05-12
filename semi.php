@@ -175,7 +175,7 @@ echo "\n";
     $getData = get_between($alarm[1], '"nameId":"Hadiah Referral",', '},');
     $amountTersedia = get_between($getData, '"remainNum":', ',"sendAmount":');
     echo '[ '.date('H:i:s').' ] Reward Tersedia Adalah : '.$amountTersedia.PHP_EOL;
-    if ($amountTersedia < 10) {
+    if ($amountTersedia < 0) {
         echo '[ '.date('H:i:s').' ] Menunggu Hingga Tersedia'.PHP_EOL;
         goto awal;
     } else {
